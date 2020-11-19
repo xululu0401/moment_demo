@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:layout_above="@id/bottom_view"/>
+
+    <FrameLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#900"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/self_avator_img"
+        android:layout_alignBottom="@id/bottom_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="#090"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_above="@id/bottom_view"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@id/self_avator_img"
+        android:layout_marginRight="8dp"
+        tools:text = "jason xu"/>
+
+
+
+
+</RelativeLayout>

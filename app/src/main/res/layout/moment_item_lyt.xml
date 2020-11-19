@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avator_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        tools:background="#e00"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16ps"
+        android:layout_alignTop="@id/avator_img"
+        android:layout_toRightOf="@id/avator_img"
+        android:layout_marginLeft="4dp"/>
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_tv"
+        android:layout_alignLeft="@id/name_tv"
+        android:layout_marginTop="8dp"
+        tools:text="这里是朋友圈的内容这里是朋友圈的内容这里是朋友圈的内容这里是朋友圈的内容"
+        />
+
+
+
+
+
+
+</RelativeLayout>
