@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jasonxu.simplemoment.data.CommentInfo;
+import com.jasonxu.simplemoment.data.MomentInfo;
 import com.jasonxu.simplemoment.data.SelfInfo;
 import com.jasonxu.simplemoment.holders.FooterHolder;
 import com.jasonxu.simplemoment.holders.MomentInfoHolder;
@@ -27,13 +28,13 @@ public class MomentAdapter extends RecyclerView.Adapter {
     private static final int FOOTER_TYPE = 2;
 
     private Context mContext;
-    private List<CommentInfo> mCommentInfos;
+    private List<MomentInfo> mMomentInfos;
     private SelfInfo mSelfInfo;
 
-    public MomentAdapter(Context ctx, SelfInfo selfInfo, List<CommentInfo> comments){
+    public MomentAdapter(Context ctx, SelfInfo selfInfo, List<MomentInfo> momentInfos){
         mContext = ctx;
         mSelfInfo = selfInfo;
-        mCommentInfos = comments;
+        momentInfos = momentInfos;
     }
 
     @NonNull
@@ -66,7 +67,7 @@ public class MomentAdapter extends RecyclerView.Adapter {
     public int getItemViewType(int position) {
         if (position == 0){
             return SELF_TYPE;
-        } else if (position == mCommentInfos.size()){
+        } else if (position == mMomentInfos.size()){
             return FOOTER_TYPE;
         } else {
             return MOMENT_TYPE;
@@ -75,6 +76,6 @@ public class MomentAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mMomentInfos.size() + 2;
     }
 }

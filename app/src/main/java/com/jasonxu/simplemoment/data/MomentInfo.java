@@ -1,5 +1,7 @@
 package com.jasonxu.simplemoment.data;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 /**
@@ -8,10 +10,16 @@ import java.util.List;
  */
 public class MomentInfo {
 
+    @SerializedName("content")
     private String mContent;
+    @SerializedName("sender")
     private Sender mSender;
+    @SerializedName("images")
     private List<String> mImgs;
+    @SerializedName("sender")
     private List<CommentInfo> mComments;
+    @SerializedName("error")
+    private String mErrorInfo;
 
     public String getContent() {
         return mContent;
@@ -43,5 +51,13 @@ public class MomentInfo {
 
     public void setComments(List<CommentInfo> comments) {
         mComments = comments;
+    }
+
+    public String getErrorInfo() {
+        return mErrorInfo;
+    }
+
+    public void setErrorInfo(String errorInfo) {
+        mErrorInfo = errorInfo;
     }
 }

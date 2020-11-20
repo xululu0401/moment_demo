@@ -1,14 +1,20 @@
 package com.jasonxu.simplemoment.data;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Author: jason xu
  * Time: 11/19/20 20:41
  */
 public class SelfInfo {
 
+    @SerializedName("profile-image")
     private String mProImg;
+    @SerializedName("avatar")
     private String mAvatar;
+    @SerializedName("nick")
     private String mNick;
+    @SerializedName("username")
     private String mUsrName;
 
     public String getProImg() {

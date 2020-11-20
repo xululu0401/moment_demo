@@ -17,7 +17,8 @@
         android:id="@+id/name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="16ps"
+        android:textSize="16sp"
+        tools:text = "jason xu"
         android:layout_alignTop="@id/avator_img"
         android:layout_toRightOf="@id/avator_img"
         android:layout_marginLeft="4dp"/>
@@ -32,7 +33,33 @@
         tools:text="这里是朋友圈的内容这里是朋友圈的内容这里是朋友圈的内容这里是朋友圈的内容"
         />
 
+    <GridView
+        android:id="@+id/imgs_gv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:numColumns="3"
+        android:layout_below="@id/content_tv"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
 
+    <ImageView
+        android:id="@+id/commont_iv"
+        android:layout_width="8dp"
+        android:layout_height="5dp"
+        android:layout_below="@id/imgs_gv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:background="#e00"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commonts_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commont_iv"
+        android:layout_alignLeft="@id/imgs_gv"/>
 
 
 
